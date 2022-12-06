@@ -1,3 +1,5 @@
+package LAB03;
+
 import java.util.EmptyStackException;
 
 public class Stack {
@@ -9,27 +11,27 @@ public class Stack {
         top = null;
     }
 
-    public void push(int data){
+    public void push(char data){
         ListNode temp = new ListNode(data);
         temp.setNext(top);
         top = temp;
         length++;
     }
 
-    public int pop(){
+    public char pop(){
         if (size() == 0){
             throw new EmptyStackException();}
         else {
-            int result = top.getData();
+            char result = (char) top.getData();
             top = top.getNext();
             length--;
             return result;
         }
     }
-    public int peek(){
+    public char peek(){
         if (size() == 0){
             throw new EmptyStackException();}
-        return top.getData();
+        return (char) top.getData();
     }
     public boolean isEmpty() {
         return (length == 0);

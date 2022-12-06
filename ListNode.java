@@ -1,4 +1,6 @@
-public class ListNode<E> {
+package LAB03;
+
+public class ListNode <E> {
     public ListNode next;
     public int data;
 
@@ -8,7 +10,6 @@ public class ListNode<E> {
         data = Integer.MIN_VALUE;
 
     }
-
 
     public ListNode (int data) {
         next = null;
@@ -34,6 +35,4 @@ public class ListNode<E> {
     public String toString(){
         return Integer.toString(data);
     }
-
-
 }
